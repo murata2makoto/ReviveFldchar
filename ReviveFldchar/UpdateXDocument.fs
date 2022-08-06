@@ -3,7 +3,8 @@
 open System.Collections.Generic
 open System.Xml.Linq;
 
-let addBRSE (ceList:(string * XElement) list) (dict: Dictionary<string, XElement * XElement * XElement * XElement>) =
+let addBRSE (ceList:(string * XElement) list) 
+    (dict: Dictionary<string, XElement * XElement * XElement * XElement>) =
     let mutable covered = Set.empty
     for (index, secCitation) in ceList do
         match dict.TryGetValue(index) with 
